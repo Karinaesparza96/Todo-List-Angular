@@ -1,0 +1,39 @@
+<section *ngIf="tarefas.length > 0; else inicio">
+  <mat-selection-list #list>
+    <mat-list-option
+      checkboxPosition="before"
+      [value]="item"
+      [(selected)]="item.done"
+      (click)="tarefaConcluida(item)"
+      *ngFor="let item of tarefas"
+    >
+      <span [class.done]="item.done">
+        {{ item.nome }}
+      </span>
+      <div class="icons">
+        <button
+          mat-icon-button
+          (click)="editar(item.id, $event)"
+          title="Editar"
+          color="accent"
+        >
+          <mat-icon>edit_note</mat-icon>
+        </button>
+        <button (click)="excluir(item, $event)" title="Deletar" mat-icon-button>
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    </mat-list-option>
+  </mat-selection-list>
+</section>
+<ng-template #inicio>
+  <div class="container">
+    <span>Adione tarefas, lembretes, ou que desejar :)</span>
+    <img src="../../assets/bg-task 1.png" alt="imagem de fundo" />
+  </div>
+</ng-template>
+<div class="button">
+  <button mat-flat-button color="primary" routerLink="/criar">
+    Criar tarefa
+  </button>
+</div>

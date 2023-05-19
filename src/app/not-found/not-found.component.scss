@@ -1,0 +1,33 @@
+section {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+
+  button {
+    position: absolute;
+    top: 0;
+    left: 30px;
+  }
+
+  .not-found {
+    width: 460px;
+    margin: 0 auto;
+    img {
+      width: 100%;
+    }
+  }
+
+  .container {
+    display: flex;
+    vertical-align: center;
+    gap: 10px;
+
+    p {
+      font-family: 18px;
+      font-weight: bold;
+    }
+  }
+}

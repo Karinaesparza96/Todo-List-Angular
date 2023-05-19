@@ -1,0 +1,23 @@
+<form class="form" [formGroup]="tarefaFormGroup">
+  <mat-form-field class="example-full-width">
+    <mat-label>Nome da tarefa</mat-label>
+    <input
+      matInput
+      placeholder="Ex. estudar"
+      type="text"
+      formControlName="nome"
+    />
+  </mat-form-field>
+
+  <div class="form-buttons">
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="onSubmit()"
+      [disabled]="tarefaFormGroup.invalid"
+    >
+      Salvar
+    </button>
+    <button mat-raised-button (click)="voltar()">Cancelar</button>
+  </div>
+</form>

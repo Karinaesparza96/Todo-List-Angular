@@ -1,0 +1,35 @@
+.container {
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  span {
+    padding: 20px 0;
+    font-family: sans-serif;
+    font-weight: bold;
+  }
+}
+.button {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.done {
+  text-decoration-line: line-through;
+  text-decoration-thickness: 0.1rem;
+}
+
+.icons {
+  display: inline-flex;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
+
+mat-selection-list {
+  width: 80%;
+  margin: 0 auto;
+}
